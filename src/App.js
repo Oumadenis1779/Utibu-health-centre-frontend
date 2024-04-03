@@ -1,32 +1,34 @@
 // App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SignIn from './components/Authentication/SignIn';
-import SignUp from './components/Authentication/SignUp';
-import ForgotPassword from './components/Authentication/ForgotPassword';
+import { useState } from 'react';
+import { BrowserRouter , Route, Routes} from 'react-router-dom';
+import SignIn from './components/Authentification/SignIn';
+import SignUp from './components/Authentification/SignUp';
+import ForgotPassword from './components/Authentification/ForgotPassword';
 import Dashboard from './components/Dashboard';
-import OrderMedication from './components/OrderMedication';
+import Order from './components/Order';
 import Cart from './components/Cart';
-import Checkout from './components/Checkout';
-import OrderStatus from './components/OrderStatus';
+import Medication from './components/Medication';
+
+import OrderItem from './components/OrderItem';
 import Statement from './components/Statement';
 
 const App = () => {
+  const [userId,setUsreId]=useState(null);
   return (
-    <Router>
-      <Switch>
-        <Route path="/signin" component={SignIn} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/ordermedication" component={OrderMedication} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/checkout" component={Checkout} />
-        <Route path="/orderstatus" component={OrderStatus} />
-        <Route path="/statement" component={Statement} />
-        <Route path="/" component={Dashboard} />
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/medication" element={<Medication/>} />
+        <Route path="/signin" element={<SignIn setUserId={setUsreId}/>} />
+        <Route path="/signup" element={<SignUp/>} />
+        <Route path="/forgotpassword" element={<ForgotPassword/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/ordermedication" element={<Order/>} />
+        <Route path="/cart" element={<Cart userId={userId}/>} />
+        <Route path="/orderstatus" element={<OrderItem/>} />
+        <Route path="/statement" element={<Statement/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

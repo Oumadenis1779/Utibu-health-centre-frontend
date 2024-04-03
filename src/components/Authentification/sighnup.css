@@ -1,0 +1,182 @@
+.signup-page {
+
+  font-family: Arial, sans-serif;
+  color: #44ff0b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://unsplash.it/1200/800/?random")
+}
+
+.signup-page .container {
+  /* Styles for container within SignUp component */
+  background: rgba(
+    110,
+    107,
+    107,
+    0.66
+  ); /* Adjust the alpha value (0.7) to control transparency */
+  padding: 40px; /* Increased padding for better spacing */
+  border: 5px solid #19f2dd;
+  width: 550px;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px; /* Added border-radius for rounded corners */
+  box-shadow: 0 0 20px rgba(11, 142, 198, 0.1); /* Added box shadow for depth */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  margin: auto; /* Center both horizontally and vertically */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.signup-page .col.s6 > .btn {
+  /* Styles for button */
+  width: 100%;
+  margin-top: 20px; /* Added margin top for button spacing */
+}
+
+.signup-page .gender-male,
+.signup-page .gender-female {
+  /* Styles for gender options */
+  display: inline-block;
+  margin-right: 20px; /* Adjusted margin for better spacing between gender options */
+}
+
+.signup-page .radio:required {
+  /* Styles for required radio buttons */
+  border-color: red;
+}
+
+.signup-page .container {
+  /* Animation */
+  animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
+}
+
+@keyframes showUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.signup-page .row {
+  /* Styles for row */
+  margin-bottom: 20px; /* Increased margin bottom for better spacing between rows */
+}
+
+.signup-page .ngl {
+  /* Styles for ngl */
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+/* Styling for form elements */
+.signup-page h2 {
+  /* Styles for heading */
+  text-align: center; /* Center align the heading */
+  margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+
+.signup-page .form-label {
+  /* Styles for form labels */
+  display: block; /* Display labels as block elements */
+  font-size: 18px; /* Adjust label font size */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+  font-weight: bold; /* Add bold font weight */
+  color: #41ffef; /* Label text color */
+  text-align: left; /* Align label text to the left */
+}
+
+.signup-page .form-control {
+  /* Styles for form inputs */
+  width: 100%; /* Make form inputs full width */
+  padding: 10px; /* Add padding to form inputs */
+  font-size: 16px; /* Adjust input font size */
+  margin-bottom: 20px; /* Add margin bottom for spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  border: 1px solid #02e9f6; /* Add border */
+  background-color: rgba(
+    8,
+    190,
+    190,
+    0.329
+  ); /* Adjust the alpha value (0.7) to control transparency */
+}
+
+.signup-page .btn-primary {
+  /* Styles for primary button */
+  position: relative; /* Added */
+  text-decoration: none; /* Added */
+  color: #000000; /* Button text color */
+  font-size: 18px; /* Button font size */
+  border: none; /* Updated */
+  background-color: #0c7970; /* Button background color */
+  cursor: pointer; /* Added */
+  overflow: hidden; /* Added */
+  padding: 10px;
+  border-radius: 10px; /* Added */
+}
+
+.signup-page .btn-primary:hover {
+  /* Styles for primary button on hover */
+  background-color: #08bebe; /* Button hover background color */
+  opacity: 0.7; /* Added */
+}
+
+.signup-page .btn-primary:before {
+  /* Styles for pseudo-element */
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.signup-page .btn-primary:hover:before {
+  /* Additional styles for pseudo-element on hover */
+  display: none;
+}
+
+.signup-page .btn-primary:active {
+  /* Styles for active state */
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shiny-btn1 {
+  /* Keyframes for pseudo-element animation */
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}

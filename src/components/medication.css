@@ -1,0 +1,120 @@
+.container {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(243, 243, 243);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.shoe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.shoe-item {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shoe-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.shoe-item:hover .image-container img {
+  transform: scale(1.2) translateY(-10%);
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5em;
+}
+
+
+.btn-9 {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: rgb(51, 255, 0);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.btn-9:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.btn-9:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(253, 72, 27, 0.1) 40%,rgba(112, 177, 149, 0.1) 60% , transparent 100%);
+}
+
+.btn-9:hover:before {
+  transform: translateX(15em);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add{
+  color: rgb(123, 255, 0);
+  font-size: larger;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+
+}
